@@ -1055,7 +1055,7 @@ export class SupabaseManagementAPI {
   }
 
   /** Upgrades the project's Postgres version */
-  async upgradeProject(ref: string, targetVersion: number) {
+  async upgradeProject(ref: string, targetVersion: string) {
     const { response } = await this.client.post("/v1/projects/{ref}/upgrade", {
       params: {
         path: {

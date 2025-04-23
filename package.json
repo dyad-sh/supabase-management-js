@@ -1,5 +1,5 @@
 {
-  "name": "supabase-management-js",
+  "name": "@dyad-sh/supabase-management-js",
   "version": "1.0.0",
   "description": "Convenience wrapper for the Supabase Management API",
   "main": "./dist/index.js",
