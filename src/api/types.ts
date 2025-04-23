@@ -68,6 +68,17 @@ export type ListFunctionsResponseData = ExtractResponseContent<
   200
 >;
 
+export type DeployFunctionRequestBody = ExtractRequestBody<
+  paths["/v1/projects/{ref}/functions/deploy"],
+  "post"
+>;
+
+export type DeployFunctionResponseData = ExtractResponseContent<
+  paths["/v1/projects/{ref}/functions/deploy"],
+  "post",
+  201
+>;
+
 export type CreateFunctionRequestBody = ExtractRequestBody<
   paths["/v1/projects/{ref}/functions"],
   "post"
