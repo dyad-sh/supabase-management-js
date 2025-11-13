@@ -780,7 +780,10 @@ export class SupabaseManagementAPI {
       }
     );
 
-    if (response.status !== 201) {
+    // I have no idea why it started returning 200, but
+    // it suddenly changed from returning 201 to returning 200.
+    // https://github.com/dyad-sh/dyad/issues/1761
+    if (response.status !== 201 && response.status !== 200) {
       throw await this.#createResponseError(response, "run query");
     }
 
